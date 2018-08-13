@@ -16,6 +16,8 @@ public class HelloUniverse {
 	// Instanciation des planètes Terre, Mars, Mercure, Jupiter, Saturne, Soleil, Uranus, Neptune, Pluton et Vénus
 	// Afficher les valeurs de la planète Jupiter
 	// Instanciation de la planète X pour utiliser le mot clé null 
+	// Création des premières méthodes rotation et révolution 
+	// Appel de ses méthodes avec Neptune et Mars
 	
 
 	public static void main(String[] args) {
@@ -101,7 +103,12 @@ public class HelloUniverse {
 		// Instanciation de la planète X
 		
 		System.out.println(X.nom + " " + "est une planète " + X.matiere + " " + "avec un diamètre de " + X.diametreKm + " " + "kilomètres.");
-
+		
+		
+		// Appelle de mes méthodes 
+		
+		Neptune.revolution();
+		Mars.rotation();
 
 
 	}
