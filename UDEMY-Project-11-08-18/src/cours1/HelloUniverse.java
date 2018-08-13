@@ -13,11 +13,15 @@ public class HelloUniverse {
 	// Utiliser la structure itérative avec for
 	// Utiliser la structure for avec switch
 	// Remplacer la boucle for par une boucle while
-	// Instanciation des planètes Terre, Mars, Mercure, Jupiter, Saturne, Soleil et Vénus
+	// Instanciation des planètes Terre, Mars, Mercure, Jupiter, Saturne, Soleil, Uranus, Neptune, Pluton et Vénus
 	// Afficher les valeurs de la planète Jupiter
+	// Instanciation de la planète X pour utiliser le mot clé null 
+	
 
 	public static void main(String[] args) {
 
+		// Mes instances 
+		
 		Planete Venus  = new Planete();
 		Planete Mars = new Planete();
 		Planete Mercure = new Planete();
@@ -28,6 +32,7 @@ public class HelloUniverse {
 		Planete Uranus = new Planete();
 		Planete Pluton = new Planete();
 		Planete Neptune = new Planete();
+		Planete X = new Planete();
 		
 		// Instanciation de la planète Vénus 
 		
@@ -90,8 +95,12 @@ public class HelloUniverse {
 		Neptune.diametreKm = 49532;
 
 		
-		System.out.println(Jupiter.nom + " " + "est une planète " + Jupiter.matiere +" " + "avec un diamètre de " + Jupiter.diametreKm + " " + "kilomètres.");
+		System.out.println(Jupiter.nom + " " + "est une planète " + Jupiter.matiere + " " + "avec un diamètre de " + Jupiter.diametreKm + " " + "kilomètres.");
 
+		
+		// Instanciation de la planète X
+		
+		System.out.println(X.nom + " " + "est une planète " + X.matiere + " " + "avec un diamètre de " + X.diametreKm + " " + "kilomètres.");
 
 
 
