@@ -7,6 +7,7 @@ public class HelloWorld {
 	// Ajouter les opérateurs d'incrémentation
 	// Utilisation de la concaténation
 	// Première instruction conditionnelle
+	// Ajout du else
 	
 	public static void main(String[] args) {
 		String premiereNouvelle ="Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de:";
@@ -15,9 +16,11 @@ public class HelloWorld {
 		System.out.println(premiereNouvelle + nbrePlanetes);
 		}
 		
+		else {
 		String deuxiemeNouvelle = "Il y a quelques années cependant,elles étaient au nombre de :";
 		nbrePlanetes++;
 		System.out.println(deuxiemeNouvelle + nbrePlanetes);
+		}
 	}
 
 }
