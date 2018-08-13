@@ -11,25 +11,20 @@ public class HelloWorld {
 	// Ajout du else if
 	// Remplacer les else / else if / else par un switch case default break
 	// Utiliser la structure itérative avec for
+	// Utiliser la structure for avec switch
 
 	public static void main(String[] args) {
-
 		for (int nbrePlanetes = 8; nbrePlanetes < 11; nbrePlanetes++) {
-
-			if (nbrePlanetes == 8) {
-				System.out.println(
-						"Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de 8");
+			switch (nbrePlanetes) {
+			case 8:
+				System.out.println("Auparavant le nombre de planètes était de : " + nbrePlanetes);
+				break;
+			case 9:
+				System.out.println("Actuellement le nombre de planètes est de : " + nbrePlanetes);
+				break;
+			case 10:
+				System.out.println("Le nombre n'a cependant jamais atteint : " + nbrePlanetes);
 			}
-
-			else if (nbrePlanetes == 9) {
-				System.out.println("Il y a quelques années cependant,elles étaient au nombre de : 9");
-			}
-
-			else {
-				System.out.println(
-						"Au cours de l'ère moderne, le nombre de planètes n'a jamais été officiellement de : 10");
-			}
-
 		}
 	}
 }
