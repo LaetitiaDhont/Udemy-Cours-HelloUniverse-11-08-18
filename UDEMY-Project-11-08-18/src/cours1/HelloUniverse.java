@@ -107,8 +107,9 @@ public class HelloUniverse {
 		
 		// Appelle de mes méthodes 
 		
-		Neptune.revolution();
-		Mars.rotation();
+		System.out.println("Neptune à effectué " + Neptune.revolution(-3542) + " tours autour de son étoile.");
+		System.out.println("Mars à effectué " + Mars.rotation(-684) + " tours sur elle même.");
+		System.out.println("Vénus à effectué " + Venus.rotation(1250) + " tours sur elle même.");
 
 
 	}
