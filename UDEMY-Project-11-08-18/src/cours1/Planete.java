@@ -13,6 +13,7 @@ public class Planete {
 	Atmosphere atmosphere;
 	Vaisseau vaisseauActuellementAcoste;
 	static String forme = "Sphérique";
+	static int nbrePlanetesDecouvertes = 0;
 
 	// Mes méthodes
 	// Amélioration de mes méthodes qui indique l'angle de rotation de mes planètes
@@ -70,6 +71,12 @@ public class Planete {
 		}
 
 		return distanceKM;
+	}
+	
+	// Ajout du constructeur Planete
+	
+	Planete() {
+		nbrePlanetesDecouvertes++;
 	}
 
 }

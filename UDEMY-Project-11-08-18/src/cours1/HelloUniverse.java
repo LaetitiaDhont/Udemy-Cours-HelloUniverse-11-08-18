@@ -153,6 +153,10 @@ public class HelloUniverse {
 
 		Planete.expansion(10.5);
 		Planete.expansion(14.2);
+		
+		// Afficher le nombre de planètes grâce au constructeur
+		
+		System.out.println("Le nombre de planètes est de " + Planete.nbrePlanetesDecouvertes + ".");
 
 	}
 
