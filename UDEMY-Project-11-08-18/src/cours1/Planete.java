@@ -9,7 +9,7 @@ public class Planete {
 	long diametreKm;
 	int totalVisiteurs;
 	Atmosphere atmosphere;
-
+	Vaisseau vaisseauActuellementAcoste;
 	// Mes méthodes
 	// Amélioration de mes méthodes qui indique l'angle de rotation de mes planètes
 	// + valeur de retour
@@ -24,26 +24,26 @@ public class Planete {
 		return angle / 360;
 
 	}
+	
+	
+	// Fusion des deux méthodes avec l'utilisation de la classe Vaisseau
+	
+	Vaisseau acceuillirVisiteurs(Vaisseau vaisseau) {
 
-	void acceuillirVaisseau(int nbreHumains) {
-		totalVisiteurs = nbreHumains + totalVisiteurs;
+		totalVisiteurs = totalVisiteurs + vaisseau.nbrePassagers;
+
+		if (vaisseauActuellementAcoste == null) {
+			System.out.println("Aucun vaisseau ne s'en va.");
+		}
+
+		else {
+			System.out.println("Un vaisseau de type " + vaisseauActuellementAcoste.type + " doit s'en aller.");
+		}
+		
+		Vaisseau vaisseauPrecedent = vaisseauActuellementAcoste;
+		vaisseauActuellementAcoste = vaisseau;
+		return vaisseauPrecedent;
+
 	}
 
-	void acceuillirVaisseau(String typeVaisseau) {
-		if (typeVaisseau.equals("CHASSEUR")) {
-			totalVisiteurs = totalVisiteurs + 3;
-		}
-
-		else if (typeVaisseau.equals("FREGATE")) {
-			totalVisiteurs = totalVisiteurs + 12;
-		}
-
-		else if (typeVaisseau.equals("CROISEUR")) {
-			totalVisiteurs = totalVisiteurs + 50;
-		}
-
-	}
-	
-
-	
 }
