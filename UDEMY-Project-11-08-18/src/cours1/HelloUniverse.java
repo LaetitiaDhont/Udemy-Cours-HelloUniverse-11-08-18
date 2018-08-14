@@ -18,6 +18,7 @@ public class HelloUniverse {
 	// Instanciation de la planète X pour utiliser le mot clé null 
 	// Création des premières méthodes rotation et révolution 
 	// Appel de ses méthodes avec Neptune et Mars
+	// Surcharge des méthodes
 	
 
 	public static void main(String[] args) {
@@ -110,6 +111,14 @@ public class HelloUniverse {
 		System.out.println("Neptune à effectué " + Neptune.revolution(-3542) + " tours autour de son étoile.");
 		System.out.println("Mars à effectué " + Mars.rotation(-684) + " tours sur elle même.");
 		System.out.println("Vénus à effectué " + Venus.rotation(1250) + " tours sur elle même.");
+		
+		
+		// Acceuillir Vaisseau avec l'exemple de Mars
+		
+		Mars.acceuillirVaisseau(8);
+		Mars.acceuillirVaisseau("FREGATE");
+		
+		System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de " + Mars.totalVisiteurs);
 
 
 	}
