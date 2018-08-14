@@ -8,6 +8,7 @@ public class Planete {
 	String matiere;
 	long diametreKm;
 	int totalVisiteurs;
+	Atmosphere atmosphere;
 
 	// Mes méthodes
 	// Amélioration de mes méthodes qui indique l'angle de rotation de mes planètes
@@ -42,4 +43,7 @@ public class Planete {
 		}
 
 	}
+	
+
+	
 }
