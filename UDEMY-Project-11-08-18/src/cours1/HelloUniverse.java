@@ -112,7 +112,6 @@ public class HelloUniverse {
 		System.out.println("Mars à effectué " + Mars.rotation(-684) + " tours sur elle même.");
 		System.out.println("Vénus à effectué " + Venus.rotation(1250) + " tours sur elle même.");
 
-		
 		System.out
 				.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de " + Mars.totalVisiteurs);
 
@@ -129,25 +128,32 @@ public class HelloUniverse {
 		System.out.println("L'atmosphère d'Uranus est composé de " + Uranus.atmosphere.tauxHydrogene
 				+ " % d'hydrogène, de " + Uranus.atmosphere.tauxDHelium + " % d'hélium et de "
 				+ Uranus.atmosphere.tauxMethane + " % de méthane.");
-		
-		
+
 		// Utilisation de ma classe Vaisseau méthodes + objets
-		
+
 		Vaisseau vaisseau1 = new Vaisseau();
-		
+
 		vaisseau1.type = "Frégate";
 		vaisseau1.nbrePassagers = 9;
-		
+
 		Mars.acceuillirVisiteurs(vaisseau1);
-		
+
 		Vaisseau vaisseau2 = new Vaisseau();
-		
+
 		vaisseau2.type = "Croiseur";
 		vaisseau2.nbrePassagers = 42;
-		
+
 		Mars.acceuillirVisiteurs(vaisseau2);
-	
+
 		System.out.println("Le nombre d'humains actuellement sur " + Mars.nom + " est de " + Mars.totalVisiteurs + ".");
+		System.out.println("La forme d'une planète est " + Planete.forme + ".");
+		System.out.println("La forme de la planète " + Mars.nom + " est " + Planete.forme + ".");
+
+		// Appelle de ma méthode static expansion
+
+		Planete.expansion(10.5);
+		Planete.expansion(14.2);
+
 	}
 
 }
