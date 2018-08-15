@@ -21,22 +21,24 @@ public class HelloUniverse {
 	// Appel de ses méthodes avec Neptune et Mars
 	// Surcharge des méthodes
 	// Création d'une nouvelle classe Atmosphère
+	// Instances de mes planètes complétée avec le nom
+	// Il n'est donc plus possible de construire une planète sans nom !
 
 	public static void main(String[] args) {
 
 		// Mes instances
 
-		Planete Venus = new Planete();
-		Planete Mars = new Planete();
-		Planete Mercure = new Planete();
-		Planete Terre = new Planete();
-		Planete Soleil = new Planete();
-		Planete Jupiter = new Planete();
-		Planete Saturne = new Planete();
-		Planete Uranus = new Planete();
-		Planete Pluton = new Planete();
-		Planete Neptune = new Planete();
-		Planete X = new Planete();
+		Planete Venus = new Planete("Venus");
+		Planete Mars = new Planete("Mars");
+		Planete Mercure = new Planete("Mercure");
+		Planete Terre = new Planete("Terre");
+		Planete Soleil = new Planete("Soleil");
+		Planete Jupiter = new Planete("Jupiter");
+		Planete Saturne = new Planete("Saturne");
+		Planete Uranus = new Planete("Uranus");
+		Planete Pluton = new Planete("Pluton");
+		Planete Neptune = new Planete("Neptune");
+		Planete X = new Planete("X");
 
 		// Instanciation de la planète Vénus
 
@@ -153,9 +155,9 @@ public class HelloUniverse {
 
 		Planete.expansion(10.5);
 		Planete.expansion(14.2);
-		
+
 		// Afficher le nombre de planètes grâce au constructeur
-		
+
 		System.out.println("Le nombre de planètes est de " + Planete.nbrePlanetesDecouvertes + ".");
 
 	}
