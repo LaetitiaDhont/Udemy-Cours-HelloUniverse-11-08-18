@@ -28,7 +28,7 @@ public class HelloUniverse {
 
 		// Mes instances
 
-		PlaneteTellurique Venus = new PlaneteTellurique ("Venus");
+		PlaneteTellurique Venus = new PlaneteTellurique("Venus");
 		PlaneteTellurique Mars = new PlaneteTellurique("Mars");
 		PlaneteTellurique Mercure = new PlaneteTellurique("Mercure");
 		PlaneteTellurique Terre = new PlaneteTellurique("Terre");
@@ -41,7 +41,6 @@ public class HelloUniverse {
 
 		// Instanciation de la planète Vénus
 
-		
 		Venus.nom = "Vénus";
 		Venus.diametreKm = 12100;
 
@@ -121,34 +120,35 @@ public class HelloUniverse {
 		// Afficher le nombre de planètes grâce au constructeur
 
 		System.out.println("Le nombre de planètes est de " + Planete.nbrePlanetesDecouvertes + ".");
-		
+
 		// Attaque spaciale !
-		
+
 		VaisseauDeGuerre vaisseau3 = new VaisseauDeGuerre();
-		
+
 		vaisseau3.type = "Chasseur";
 		vaisseau3.blindage = 156;
 		vaisseau3.resistanceDuBouclier = 2000;
-		
+
 		VaisseauCivil vaisseau4 = new VaisseauCivil();
-		
+
 		vaisseau4.type = "Vaisseau-Monde";
 		vaisseau4.blindage = 4784;
 		vaisseau4.resistanceDuBouclier = 10000;
-		
+
 		vaisseau3.activerBouclier();
 		vaisseau4.activerBouclier();
 		
-		vaisseau3.attaque(vaisseau4, "lasers photoniques", 3);
-		
+		// Cast VaisseauDeGuerre 
+
+		((VaisseauDeGuerre)vaisseau3).attaque(vaisseau4, "lasers photoniques", 3);
+
 		vaisseau4.desactiverBouclier();
-		
-		System.out.println("Le vaisseau a été attaqué ! Il lui reste un bouclier de : " + vaisseau4.resistanceDuBouclier +
-				" Son blindage est dorénavant de : " + vaisseau4.blindage
-				);
-		
+
+		System.out.println("Le vaisseau a été attaqué ! Il lui reste un bouclier de : " + vaisseau4.resistanceDuBouclier
+				+ " Son blindage est dorénavant de : " + vaisseau4.blindage);
+
 		// Les interfaces avec l'exemple de Mars
-		
+
 		Mars.acceuillirVisiteurs(vaisseau4);
 		Mars.acceuillirVisiteurs(vaisseau3);
 

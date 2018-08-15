@@ -15,6 +15,10 @@ public class PlaneteTellurique extends Planete implements Habitable {
 
 		// Si la valeur de ma variable de type Vaisseau vaisseauActuellementAcoste est
 		// null alors ce la signifie qu'il y a aucun vaisseau.
+		
+		if (vaisseau instanceof VaisseauDeGuerre) {
+			((VaisseauDeGuerre) vaisseau).desactiverArmes();
+		}
 
 		if (vaisseauActuellementAcoste == null)
 
@@ -32,5 +36,9 @@ public class PlaneteTellurique extends Planete implements Habitable {
 		vaisseauActuellementAcoste = vaisseau;
 		return vaisseauPrecedent;
 
+		
+		
+		
+		
 	}
 }
