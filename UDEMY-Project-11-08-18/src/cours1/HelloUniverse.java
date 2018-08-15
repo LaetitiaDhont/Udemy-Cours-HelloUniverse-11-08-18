@@ -28,85 +28,67 @@ public class HelloUniverse {
 
 		// Mes instances
 
-		Planete Venus = new Planete("Venus");
-		Planete Mars = new Planete("Mars");
-		Planete Mercure = new Planete("Mercure");
-		Planete Terre = new Planete("Terre");
-		Planete Soleil = new Planete("Soleil");
-		Planete Jupiter = new Planete("Jupiter");
-		Planete Saturne = new Planete("Saturne");
-		Planete Uranus = new Planete("Uranus");
-		Planete Pluton = new Planete("Pluton");
-		Planete Neptune = new Planete("Neptune");
-		Planete X = new Planete("X");
+		PlaneteTellurique Venus = new PlaneteTellurique ("Venus");
+		PlaneteTellurique Mars = new PlaneteTellurique("Mars");
+		PlaneteTellurique Mercure = new PlaneteTellurique("Mercure");
+		PlaneteTellurique Terre = new PlaneteTellurique("Terre");
+		PlaneteGazeuse Soleil = new PlaneteGazeuse("Soleil");
+		PlaneteGazeuse Jupiter = new PlaneteGazeuse("Jupiter");
+		PlaneteGazeuse Saturne = new PlaneteGazeuse("Saturne");
+		PlaneteGazeuse Uranus = new PlaneteGazeuse("Uranus");
+		PlaneteGazeuse Pluton = new PlaneteGazeuse("Pluton");
+		PlaneteGazeuse Neptune = new PlaneteGazeuse("Neptune");
 
 		// Instanciation de la planète Vénus
 
-		Venus.matiere = "Tellurique";
+		
 		Venus.nom = "Vénus";
 		Venus.diametreKm = 12100;
 
 		// Instanciation de la planète Terre
 
-		Terre.matiere = "Tellurique";
 		Terre.nom = "Terre";
 		Terre.diametreKm = 12756;
 
 		// Instanciation de la planète Mercure
 
-		Mercure.matiere = "Tellurique";
 		Mercure.nom = "Mercure";
 		Mercure.diametreKm = 4880;
 
 		// Instanciation de la planète Mars
 
-		Mars.matiere = "Tellurique";
 		Mars.nom = "Mars";
 		Mars.diametreKm = 6792;
 
 		// Instanciation de la planète Jupiter
 
-		Jupiter.matiere = "Gazeuse";
 		Jupiter.nom = "Jupiter";
 		Jupiter.diametreKm = 142984;
 
 		// Instanciation de la planète Soleil
 
-		Soleil.matiere = "Gazeux";
 		Soleil.nom = "Soleil";
 		Soleil.diametreKm = 149600000;
 
 		// Instanciation de la planète Saturne
 
-		Saturne.matiere = "Gazeuse";
 		Saturne.nom = "Saturne";
 		Saturne.diametreKm = 120536;
 
 		// Instanciation de la planète Uranus
 
-		Uranus.matiere = "Gazeuse";
 		Uranus.nom = "Uranus";
 		Uranus.diametreKm = 51118;
 
 		// Instanciation de la planète Pluton
 
-		Pluton.matiere = "Gazeuse";
 		Pluton.nom = "Pluton";
 		Pluton.diametreKm = 2300;
 
 		// Instanciation de la planète Neptune
 
-		Neptune.matiere = "Gazeuse";
 		Neptune.nom = "Neptune";
 		Neptune.diametreKm = 49532;
-
-		System.out.println(Jupiter.nom + " " + "est une planète " + Jupiter.matiere + " " + "avec un diamètre de "
-				+ Jupiter.diametreKm + " " + "kilomètres.");
-
-		// Instanciation de la planète X
-
-		System.out.println(X.nom + " " + "est une planète " + X.matiere + " " + "avec un diamètre de " + X.diametreKm
-				+ " " + "kilomètres.");
 
 		// Appelle de mes méthodes
 
@@ -130,26 +112,6 @@ public class HelloUniverse {
 		System.out.println("L'atmosphère d'Uranus est composé de " + Uranus.atmosphere.tauxHydrogene
 				+ " % d'hydrogène, de " + Uranus.atmosphere.tauxDHelium + " % d'hélium et de "
 				+ Uranus.atmosphere.tauxMethane + " % de méthane.");
-
-		// Utilisation de ma classe Vaisseau méthodes + objets
-
-		Vaisseau vaisseau1 = new Vaisseau();
-
-		vaisseau1.type = "Frégate";
-		vaisseau1.nbrePassagers = 9;
-
-		Mars.acceuillirVisiteurs(vaisseau1);
-
-		Vaisseau vaisseau2 = new Vaisseau();
-
-		vaisseau2.type = "Croiseur";
-		vaisseau2.nbrePassagers = 42;
-
-		Mars.acceuillirVisiteurs(vaisseau2);
-
-		System.out.println("Le nombre d'humains actuellement sur " + Mars.nom + " est de " + Mars.totalVisiteurs + ".");
-		System.out.println("La forme d'une planète est " + Planete.forme + ".");
-		System.out.println("La forme de la planète " + Mars.nom + " est " + Planete.forme + ".");
 
 		// Appelle de ma méthode static expansion
 
@@ -185,6 +147,10 @@ public class HelloUniverse {
 				" Son blindage est dorénavant de : " + vaisseau4.blindage
 				);
 		
+		// Les interfaces avec l'exemple de Mars
+		
+		Mars.acceuillirVisiteurs(vaisseau4);
+		Mars.acceuillirVisiteurs(vaisseau3);
 
 	}
 
