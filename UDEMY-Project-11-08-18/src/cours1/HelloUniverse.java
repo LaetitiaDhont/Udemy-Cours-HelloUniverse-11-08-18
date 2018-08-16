@@ -123,15 +123,14 @@ public class HelloUniverse {
 
 		// Attaque spaciale !
 
-		VaisseauDeGuerre vaisseau3 = new VaisseauDeGuerre();
+		VaisseauDeGuerre vaisseau3 = new VaisseauDeGuerre("CHASSEUR");
 
 		vaisseau3.type = "Chasseur";
 		vaisseau3.blindage = 156;
 		vaisseau3.resistanceDuBouclier = 2000;
 
-		VaisseauCivil vaisseau4 = new VaisseauCivil();
+		VaisseauCivil vaisseau4 = new VaisseauCivil("VAISSEAU-MONDE");
 
-		vaisseau4.type = "Vaisseau-Monde";
 		vaisseau4.blindage = 4784;
 		vaisseau4.resistanceDuBouclier = 10000;
 
@@ -151,7 +150,26 @@ public class HelloUniverse {
 
 		Mars.acceuillirVisiteurs(vaisseau4);
 		Mars.acceuillirVisiteurs(vaisseau3);
-
+		
+		// Classes et méthodes abstraites
+		
+		VaisseauDeGuerre vaisseau5 = new VaisseauDeGuerre("CHASSEUR");
+		Terre.acceuillirVisiteurs(vaisseau5);
+		System.out.println("Le chasseur a rejeté " + vaisseau5.emporterCargaison(20) + " tonnes.");
+		
+		
+		VaisseauDeGuerre vaisseau6 = new VaisseauDeGuerre("FREGATE");
+		vaisseau6.nbrePassagers = 100;
+		Terre.acceuillirVisiteurs(vaisseau6);
+		System.out.println("La fregate a rejeté " + vaisseau6.emporterCargaison(45) + " tonnes.");		
+		System.out.println("La fregate a rejeté " + vaisseau6.emporterCargaison(12) + " tonnes.");
+		
+		
+		VaisseauCivil vaisseau7 = new VaisseauCivil("VAISSEAU-MONDE");
+		Terre.acceuillirVisiteurs(vaisseau7);
+		System.out.println("Le vaisseau-monde a rejeté " + vaisseau7.emporterCargaison(1560) + " tonnes.");
+		System.out.println("Le vaisseau-monde a rejeté " + vaisseau7.emporterCargaison(600) + " tonnes.");
+		
 	}
 
 }

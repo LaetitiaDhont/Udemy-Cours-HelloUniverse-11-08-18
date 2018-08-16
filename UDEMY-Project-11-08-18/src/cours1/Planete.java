@@ -1,6 +1,6 @@
 package cours1;
 
-public class Planete {
+public abstract class Planete {
 
 	// Mes attributs
 	// Ajout de l'attribut forme qui sera static c'est à dire commune à toutes les
