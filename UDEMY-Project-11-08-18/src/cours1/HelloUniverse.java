@@ -147,10 +147,43 @@ public class HelloUniverse {
 			planete = Mercure;
 			break;
 		}
-		
+
 		planete.acceuillirVisiteurs(vaisseau);
 		int rejet = vaisseau.emporterCargaison(inputCargaison);
 		System.out.println("Le rejet est de : " + rejet);
+
+		// Les types conteneurs - wrappers
+
+		Atmosphere atmosphereUranus = new Atmosphere();
+		atmosphereUranus.tauxHydrogene = new Float(83f);
+		atmosphereUranus.tauxDHelium = new Float(15f);
+		atmosphereUranus.tauxMethane = new Float(2.5f);
+		atmosphereUranus.tauxDAzote = new Float(0.0f);
+		Uranus.atmosphere = atmosphereUranus;
+
+		if (atmosphereUranus.tauxHydrogene != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxHydrogene + " % d'hydrogène.");
+		}
+
+		if (atmosphereUranus.tauxDHelium != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDHelium + " % d'hélium.");
+		}
+		if (atmosphereUranus.tauxMethane != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxMethane + " % de methane.");
+		}
+		if (atmosphereUranus.tauxDAzote != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDAzote + " % d'azote.");
+		}
+		if (atmosphereUranus.tauxDeSodium != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDeSodium + " % de sodium.");
+		}
+		if (atmosphereUranus.tauxDioxydeCarbone != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDioxydeCarbone + " % de dioxyde de carbone.");
+		}
+		if (atmosphereUranus.tauxDArgon != null) {
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDArgon + " % d'Argon.");
+		}
+
 	}
 
 }

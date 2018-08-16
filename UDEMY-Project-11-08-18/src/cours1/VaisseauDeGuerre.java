@@ -37,7 +37,7 @@ public class VaisseauDeGuerre extends Vaisseau {
 	}
 
 	void desactiverArmes() {
-		System.out.println("Désactivation des armes d'un vaisseau de type : " + type);
+		System.out.println("Désactivation des armes d'un vaisseau de type : " + this.type);
 		armesDesactivees = true;
 	}
 

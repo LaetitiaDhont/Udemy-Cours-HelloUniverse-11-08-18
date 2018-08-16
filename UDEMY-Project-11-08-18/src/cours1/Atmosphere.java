@@ -4,11 +4,13 @@ package cours1;
 
 public class Atmosphere {
 
-	float tauxHydrogene;
-	float tauxMethane;
-	float tauxDAzote;
-	float tauxDHelium;
-	float tauxDArgon;
-	float tauxDioxydeCarbone;
-	float tauxDeSodium;
+	Float tauxHydrogene;
+	Float tauxMethane;
+	Float tauxDAzote;
+	Float tauxDHelium;
+	Float tauxDArgon;
+	Float tauxDioxydeCarbone;
+	Float tauxDeSodium;
+	
+	
 }
