@@ -8,6 +8,7 @@ public abstract class Vaisseau {
 	int nbrePassagers;
 	int blindage;
 	int resistanceDuBouclier;
+	int tonnage;
 	int tonnageMax;
 	int tonnageActuel;
 
