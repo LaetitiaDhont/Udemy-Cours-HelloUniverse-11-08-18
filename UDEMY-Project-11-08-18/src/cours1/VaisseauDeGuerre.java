@@ -8,16 +8,16 @@ public class VaisseauDeGuerre extends Vaisseau {
 
 	// Mes méthodes
 
-	VaisseauDeGuerre(String type) {
-		if (type.equals("CHASSEUR")) {
+	VaisseauDeGuerre(TypeVaisseau type) {
+		if (TypeVaisseau.chasseur == type) {
 			tonnageMax = 0;
 		}
 
-		else if (type.equals("FREGATE")) {
+		else if (TypeVaisseau.fregate == type) {
 			tonnageMax = 50;
 		}
 
-		else if (type.equals("CROISEUR")) {
+		else if (TypeVaisseau.croiseur == type) {
 			tonnageMax = 100;
 		}
 	}

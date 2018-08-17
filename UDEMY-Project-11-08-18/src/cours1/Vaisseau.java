@@ -4,7 +4,7 @@ package cours1;
 
 public abstract class Vaisseau {
 
-	String type;
+	TypeVaisseau type;
 	int nbrePassagers;
 	int blindage;
 	int resistanceDuBouclier;

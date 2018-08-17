@@ -91,13 +91,13 @@ public class HelloUniverse {
 		Neptune.nom = "Neptune";
 		Neptune.diametreKm = 49532;
 
-		// La classe Scanner
+		// La classe Scanner et le type énuméré
 
-		VaisseauCivil vaisseau1 = new VaisseauCivil("VAISSEAU-MONDE");
-		VaisseauCivil vaisseau2 = new VaisseauCivil("CARGO");
-		VaisseauDeGuerre vaisseau3 = new VaisseauDeGuerre("FREGATE");
-		VaisseauDeGuerre vaisseau4 = new VaisseauDeGuerre("CHASSEUR");
-		VaisseauDeGuerre vaisseau5 = new VaisseauDeGuerre("CROISEUR");
+		VaisseauCivil vaisseau1 = new VaisseauCivil(TypeVaisseau.vaisseauMonde);
+		VaisseauCivil vaisseau2 = new VaisseauCivil(TypeVaisseau.cargo);
+		VaisseauDeGuerre vaisseau3 = new VaisseauDeGuerre(TypeVaisseau.fregate);
+		VaisseauDeGuerre vaisseau4 = new VaisseauDeGuerre(TypeVaisseau.chasseur);
+		VaisseauDeGuerre vaisseau5 = new VaisseauDeGuerre(TypeVaisseau.croiseur);
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Quel vaisseau souhaitez-vous utiliser ? Indiquer le type du vaisseau.");
@@ -109,23 +109,27 @@ public class HelloUniverse {
 		System.out.println("Quel tonnage de cargaison souhaitez-vous embarquer ?");
 		int inputCargaison = sc.nextInt();
 
+		
+		// Le type énuméré 
+		// La méthode value of convertie mon inputVaisseau en TypeVaisseau
+		TypeVaisseau typeVaisseau = TypeVaisseau.valueOf(inputVaisseau);
 		Vaisseau vaisseau = null;
 
-		switch (inputVaisseau) {
-		case "CHASSEUR":
+		switch (typeVaisseau) {
+		case chasseur:
 			vaisseau = vaisseau4;
 			break;
 
-		case "FREGATE":
+		case fregate:
 			vaisseau = vaisseau3;
 			break;
-		case "VAISSEAU-MONDE":
+		case vaisseauMonde:
 			vaisseau = vaisseau1;
 			break;
-		case "CARGO":
+		case cargo:
 			vaisseau = vaisseau2;
 			break;
-		case "CROISEUR":
+		case croiseur:
 			vaisseau = vaisseau5;
 			break;
 		}
@@ -162,23 +166,28 @@ public class HelloUniverse {
 		Uranus.atmosphere = atmosphereUranus;
 
 		if (atmosphereUranus.tauxHydrogene != null) {
-			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxHydrogene + " % d'hydrogène.");
+			System.out.println(
+					"L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxHydrogene + " % d'hydrogène.");
 		}
 
 		if (atmosphereUranus.tauxDHelium != null) {
-			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDHelium + " % d'hélium.");
+			System.out
+					.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDHelium + " % d'hélium.");
 		}
 		if (atmosphereUranus.tauxMethane != null) {
-			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxMethane + " % de methane.");
+			System.out.println(
+					"L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxMethane + " % de methane.");
 		}
 		if (atmosphereUranus.tauxDAzote != null) {
 			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDAzote + " % d'azote.");
 		}
 		if (atmosphereUranus.tauxDeSodium != null) {
-			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDeSodium + " % de sodium.");
+			System.out.println(
+					"L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDeSodium + " % de sodium.");
 		}
 		if (atmosphereUranus.tauxDioxydeCarbone != null) {
-			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDioxydeCarbone + " % de dioxyde de carbone.");
+			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDioxydeCarbone
+					+ " % de dioxyde de carbone.");
 		}
 		if (atmosphereUranus.tauxDArgon != null) {
 			System.out.println("L'atmosphere d'Uranus est composé de : " + atmosphereUranus.tauxDArgon + " % d'Argon.");

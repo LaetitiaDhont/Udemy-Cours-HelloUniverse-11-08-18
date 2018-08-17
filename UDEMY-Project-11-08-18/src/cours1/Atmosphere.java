@@ -2,7 +2,7 @@ package cours1;
 
 // Création d'une nouvelle classe atmosphère
 
-public class Atmosphere {
+public class  Atmosphere {
 
 	Float tauxHydrogene;
 	Float tauxMethane;
